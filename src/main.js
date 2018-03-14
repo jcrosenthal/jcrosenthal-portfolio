@@ -5,8 +5,15 @@ import App from './App'
 import router from './router'
 
 // Global Components
-import navigation from './components/navigation'
+import navigation from './components/navigation/navigation'
+import foot from './components/foot/foot'
+import about from './components/about/about'
+import project from './components/project/project'
+
 Vue.component('navigation', navigation)
+Vue.component('foot', foot)
+Vue.component('about', about)
+Vue.component('project', project)
 
 Vue.config.productionTip = false
 
@@ -17,4 +24,3 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
-

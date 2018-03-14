@@ -12,17 +12,11 @@ export default {
   data() {
     return {
       links: [{
-        url: '/',
-        display: 'Home'
+        url: '/linkedin',
+        display: 'linkedin'
       }, {
-        url: '/work',
-        display: 'Work'
-      }, {
-        url: '/about',
-        display: 'About'
-      }, {
-        url: '/contact',
-        display: 'Contact'
+        url: '/behance',
+        display: 'behance'
       }]
     }
   }
@@ -32,11 +26,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-nav {
-  a {
-    font-weight: bold;
-    color: #42b983;
-  }
-}
-
+@import './core';
 </style>
