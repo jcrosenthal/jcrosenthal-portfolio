@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import About from 'components/About';
 import Head from 'components/Head';
 import routes from 'routes';
+import projects from 'projects';
 
 class Home extends Component {
   constructor(props) {
@@ -38,25 +39,24 @@ class Home extends Component {
 
         <div className="portfolio-samples">
 
-          <div id="grid" className="main small-block-grid-2 large-block-grid-4">
+          <div id="grid" className="portfolio-grid">
 
-            <div className="web_design">
-              <a href="almost66" title="Almost 6 6">
-                <img src="http://res.cloudinary.com/jcrosenthal/image/upload/v1408050965/web%20design%20thumbs/almost_sixsix.jpg" alt="Almost Six Six" />
-              </a>
-            </div>
-
-            <div className="web_design">
-              <a href="almost66" title="Almost 6 6">
-                <img src="http://res.cloudinary.com/jcrosenthal/image/upload/v1408050965/web%20design%20thumbs/almost_sixsix.jpg" alt="Almost Six Six" />
-              </a>
-            </div>
-
-            <div className="web_design">
-              <a href="almost66" title="Almost 6 6">
-                <img src="http://res.cloudinary.com/jcrosenthal/image/upload/v1408050965/web%20design%20thumbs/almost_sixsix.jpg" alt="Almost Six Six" />
-              </a>
-            </div>
+            {projects.map((project, key) => (
+              <div className={project.type}>
+                <a
+                  key={String(key)}
+                  href={project.name}
+                  title={project.display}
+                >
+                  {project.images.map((image) => image.type === 'thumb' && (
+                    <img
+                      src={`https://res.cloudinary.com/jcrosenthal/image/upload/${image.src}`}
+                      alt={project.display}
+                    />
+                  ))}
+                </a>
+              </div>
+            ))}
 
           </div>
 

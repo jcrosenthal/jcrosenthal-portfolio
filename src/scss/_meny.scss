@@ -4,28 +4,47 @@
   overflow: auto;
   background: #333;
   color: #eee;
-
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
 
-.meny nav {
-  margin-top: 10px;
-}
+  hr {
+    margin: 10px 0;
+    opacity: .5;
+  }
 
-.meny nav a {
-  display: inline-block;
-  width: 200px;
-  list-style: none;
-  font-size: 20px;
-  padding: 3px 10px;
-}
+  nav {
+    margin-top: 10px;
 
-.meny nav a:before {
-  content: '-';
-  margin-right: 5px;
-  color: rgba(255, 255, 255, 0.2);
+    a {
+      font-size: 20px;
+      display: block;
+      padding: 3px 0;
+      text-decoration: none;
+      color: #FFF;
+      font-family: $open_sans;
+      margin-bottom: 20px;
+
+      &:first-child {
+        font-family: $merriweather;
+        margin-bottom: 0;
+
+        em {
+          font-size: 10px;
+          color: #B4B4B4;
+
+          @include breakpoint(phone) {
+            position: relative;
+            top: -10px;
+          }
+        }
+      }
+
+      &:hover {
+        color: #f4f4f4;
+      }
+    }
+  }
 }
 
 .contents {

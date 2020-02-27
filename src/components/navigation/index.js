@@ -1,4 +1,5 @@
 import React from 'react';
+import projects from 'projects';
 
 const links = [{
   url: '/linkedin',
@@ -18,6 +19,7 @@ const Navigation = () => (
         {' '}
         <em>web design &amp; development</em>
       </a>
+      <hr />
       {links.map((link, key) => (
         <a
           key={String(key)}
@@ -25,6 +27,15 @@ const Navigation = () => (
           title={link.display}
         >
           {link.display}
+        </a>
+      ))}
+      {projects.map((project, key) => (
+        <a
+          key={String(key)}
+          href={project.name}
+          title={project.display}
+        >
+          {project.display}
         </a>
       ))}
     </nav>

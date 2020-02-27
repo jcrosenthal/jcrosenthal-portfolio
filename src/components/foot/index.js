@@ -2,7 +2,7 @@ import React from 'react';
 
 const Foot = () => (
   <footer>
-    <div className="row">
+    <div className="footer-row">
       <div className="large-4 columns">
         <span>Portfolio</span>
         <nav>
@@ -13,7 +13,7 @@ const Foot = () => (
         </nav>
       </div>
       <div className="large-4 columns">
-        <span>Let's Work Together!</span>
+        <span>Let&lsquo;s Work Together!</span>
         <a href="mailto:jcrosenthal@gmail.com">jcrosenthal@gmail.com</a>
       </div>
       <div className="large-4 columns">
@@ -24,21 +24,27 @@ const Foot = () => (
             title="James Rosenthal Linkedin"
             target="_blank"
             className="linkedin"
-          />
+          >
+Linkedin
+
+          </a>
           <a
             href="https://www.behance.net/JCROSENTHAd34b"
             rel="noopener noreferrer"
             title="James Rosenthal Behance"
             target="_blank"
             className="behance"
-          />
+          >
+Behance
+
+          </a>
         </div>
       </div>
-      <div className="copyright">
-        Copyright &copy;
-        {(new Date()).getFullYear()}
-, James Rosenthal.  All rights reserved.
-      </div>
+    </div>
+    <div className="copyright">
+      Copyright &copy;
+      {(new Date()).getFullYear()}
+      , James Rosenthal.  All rights reserved.
     </div>
   </footer>
 );

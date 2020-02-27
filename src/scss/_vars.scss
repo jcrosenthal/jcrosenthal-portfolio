@@ -1,0 +1,25 @@
+/* MEDIA QUERY MIXIN */
+
+@mixin breakpoint($point) {
+    @if $point==phone {
+      @media (max-width: 720px) {
+        @content;
+      }
+    }
+  }
+  
+  /* Variables */
+  
+  $merriweather : 'Merriweather',
+  Times,
+  serif;
+  $open_sans : 'Open Sans',
+  'Helvetica Neue',
+  'Helvetica',
+  Arial,
+  sans-serif;
+  
+  $social_icons : url('http://res.cloudinary.com/jcrosenthal/image/upload/v1408050569/social-icons_v5hj5p.svg');
+  $diamonds : url(http://res.cloudinary.com/jcrosenthal/image/upload/v1408050447/diagmonds_hhxi8t.png);
+  $diamonds_retina : url(http://res.cloudinary.com/jcrosenthal/image/upload/v1408050447/diagmonds__2X_am4t0k.png);
+  

@@ -1,61 +1,48 @@
-/* MEDIA QUERY MIXIN */
+@import 'normalize',
+'vars',
+'base';
 
-@mixin breakpoint($point) {
-  @if $point==phone {
-    @media (max-width: 720px) {
-      @content;
-    }
-  }
-}
-
-/* Variables */
-
-$merriweather : 'Merriweather',
-Times,
-serif;
-$open_sans : 'Open Sans',
-'Helvetica Neue',
-'Helvetica',
-Arial,
-sans-serif;
-
-$social_icons : url('http://res.cloudinary.com/jcrosenthal/image/upload/v1408050569/social-icons_v5hj5p.svg');
-$diamonds : url(http://res.cloudinary.com/jcrosenthal/image/upload/v1408050447/diagmonds_hhxi8t.png);
-$diamonds_retina : url(http://res.cloudinary.com/jcrosenthal/image/upload/v1408050447/diagmonds__2X_am4t0k.png);
-
-/* end meny styles */
-
-body,
-html {
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
-  background: #F8F8F8;
-}
-
-p {
-  font-family: $open_sans;
-  font-size: 16px;
-  line-height: 150%;
-  text-align: left;
-}
-
-div.river {
+.river {
   min-height: 100%;
   max-height: 800px;
   background-image: url(http://res.cloudinary.com/jcrosenthal/image/upload/v1408050546/river_yxpscl.jpg);
   background-size: cover;
   background-position: center top;
+  display: flex;
+  flex-flow: column;
+
+  header {
+    flex-grow: 0;
+  }
+
+  .name-hero {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
 }
 
 .river.fourohfour {
   background-image: url(http://res.cloudinary.com/jcrosenthal/image/upload/v1408050625/404_cjvi7s.gif);
 }
 
-.vertical_padding {
+.heading-links {
   padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    appearance: none;
+    color: white;
+    font-weight: bold;
+    font-family: $open_sans;
+    border: solid 4px white;
+    padding: 10px 20px;
+    background: none;
+    border-radius: 4px;
+    margin-left: 40px;
+  }
 
   @include breakpoint(phone) {
     padding: 21px 0;
@@ -100,9 +87,7 @@ a.menu {
   }
 }
 
-div.name-hero {
-  margin-top: 16%;
-
+.name-hero {
   span {
     display: block;
     text-align: center;
@@ -112,14 +97,29 @@ div.name-hero {
   }
 }
 
-span.my-name-is {
+.my-name-is {
   font-size: 21px;
   font-style: italic;
   padding-bottom: 10px;
   margin-bottom: 0;
 }
 
-span.name {
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+
+  img {
+    width: 100%;
+  }
+}
+
+#root {
+  height: 100%;
+}
+
+.name {
   font-size: 71px;
   margin-top: 0;
 
@@ -128,7 +128,7 @@ span.name {
   }
 }
 
-span.subtitle {
+.subtitle {
   font-size: 16px;
   font-style: italic;
   line-height: 140%;
@@ -141,7 +141,7 @@ span.subtitle {
   }
 }
 
-div.portfolio-sections {
+.portfolio-sections {
   background-color: rgb(255, 255, 255);
   width: 100%;
   height: 120px;
@@ -175,7 +175,6 @@ div.portfolio-sections {
     }
 
     &.active {
-      background-color: rgb(52, 210, 152);
       background-color: rgba(52, 210, 152, 0.8);
 
       span {
@@ -214,16 +213,19 @@ div.portfolio-sections {
   }
 }
 
-
 .hide {
   display: none !important;
 }
 
-div.about-me {
+.about-me {
   background-color: #21A8EC;
   overflow: hidden;
   clear: both;
-  padding: 90px 0;
+  padding: 90px 30px;
+
+  .row {
+    display: flex;
+  }
 
   p {
     color: rgb(255, 255, 255);
@@ -265,27 +267,24 @@ figure {
   }
 }
 
+.footer-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.copyright {
+  max-width: 800px;
+  margin: 30px auto 0;
+}
+
+
+
 footer {
   background: $diamonds top left repeat;
-
-  .social-links a {
-    opacity: 0.6;
-    transition: all 0.3s ease;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  .large-4 {
-    overflow: hidden;
-    margin-bottom: 30px;
-    font-family: $open_sans;
-  }
-
-  .row {
-    padding: 90px 0;
-  }
+  padding: 30px 0;
+  font-family: $open_sans;
 
   a {
     font-family: $open_sans;
@@ -323,13 +322,22 @@ div.copyright {
 }
 
 .social-links {
+  justify-content: flex-end;
+  display: flex;
+
   a {
+    opacity: 0.6;
+    transition: all 0.3s ease;
     background: $social-icons no-repeat;
-    display: block;
+    display: inline-block;
     width: 40px;
     height: 40px;
-    float: left;
     margin: 0 10px;
+    font-size: 0;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   .linkedin {

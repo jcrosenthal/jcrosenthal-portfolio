@@ -60,7 +60,7 @@ class Head extends React.Component {
   render() {
     return (
       <header>
-        <div className="vertical_padding">
+        <div className="heading-links">
           <div className="large-6 small-6 columns">
             <button onClick={this.openMenu} className="menu">MENU</button>
           </div>

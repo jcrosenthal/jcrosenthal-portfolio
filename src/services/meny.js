@@ -120,8 +120,8 @@ var Meny = {
        * settings.
        */
       function setupPositions() {
- menuTransformOpened = '';
- contentsTransformClosed = '';
+		menuTransformOpened = '';
+		contentsTransformClosed = '';
         let menuAngle = config.angle;
         let contentsAngle = config.angle / -2;
 
