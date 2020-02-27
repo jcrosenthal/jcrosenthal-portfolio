@@ -1,5 +1,9 @@
 import React from 'react';
 import Meny from 'services/meny';
+import sociallinks from 'scss/social-links.module.scss';
+import styles from './core.module.scss';
+
+console.log(sociallinks);
 
 class Head extends React.Component {
   constructor(props) {
@@ -15,10 +19,10 @@ class Head extends React.Component {
     // Create an instance of Meny
     const _meny = Meny.create({
       // The element that will be animated in from off screen
-      menuElement: document.querySelector('.meny'),
+      menuElement: document.querySelector('#meny'),
 
       // The contents that gets pushed aside while Meny is active
-      contentsElement: document.querySelector('.contents'),
+      contentsElement: document.querySelector('#contents'),
 
       // [optional] The alignment of the menu (top/right/bottom/left)
       position: Meny.getQuery().p || 'left',
@@ -59,15 +63,39 @@ class Head extends React.Component {
 
   render() {
     return (
-      <header>
-        <div className="heading-links">
+      <header className={styles.header}>
+        <div className={styles['heading-links']}>
           <div className="large-6 small-6 columns">
-            <button onClick={this.openMenu} className="menu">MENU</button>
+            <button
+              type="button"
+              onClick={this.openMenu}
+              className={styles.menu}
+            >
+              MENU
+            </button>
           </div>
-          <div className="large-6 small-6 columns">
-            <div className="social-links right">
-              <a href="https://www.linkedin.com/in/jcrosenthal" target="_blank" title="James Rosenthal Linkedin" className="linkedin" />
-              <a href="https://www.behance.net/JCROSENTHAd34b" target="_blank" title="James Rosenthal Behance" className="behance" />
+          <div
+            className="large-6 small-6 columns"
+          >
+            <div className={`${sociallinks['social-links']} ${styles['social-links-container']}`}>
+              <a
+                rel="noopener"
+                href="https://www.linkedin.com/in/jcrosenthal"
+                target="_blank"
+                title="James Rosenthal Linkedin"
+                className={sociallinks.linkedin}
+              >
+              linkedin
+              </a>
+              <a
+                rel="noopener"
+                href="https://www.behance.net/JCROSENTHAd34b"
+                target="_blank"
+                title="James Rosenthal Behance"
+                className={sociallinks.behance}
+              >
+              behance
+              </a>
             </div>
           </div>
         </div>

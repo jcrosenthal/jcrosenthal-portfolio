@@ -1,0 +1,30 @@
+@import 'vars';
+
+.social-links {
+  justify-content: flex-end;
+  display: flex;
+
+  a {
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    background: $social-icons no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    font-size: 0!important;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+}
+
+.linkedin {
+  background-position: -66px -18px!important;
+}
+
+.behance {
+  background-position: -120px -18px!important;
+}

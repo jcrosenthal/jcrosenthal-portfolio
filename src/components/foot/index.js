@@ -1,8 +1,10 @@
 import React from 'react';
+import sociallinks from 'scss/social-links.module.scss';
+import styles from './core.module.scss';
 
 const Foot = () => (
-  <footer>
-    <div className="footer-row">
+  <footer className={styles.footer}>
+    <div className={styles['footer-row']}>
       <div className="large-4 columns">
         <span>Portfolio</span>
         <nav>
@@ -17,31 +19,29 @@ const Foot = () => (
         <a href="mailto:jcrosenthal@gmail.com">jcrosenthal@gmail.com</a>
       </div>
       <div className="large-4 columns">
-        <div className="social-links">
+        <div className={sociallinks['social-links']}>
           <a
             href="https://www.linkedin.com/in/jcrosenthal"
             rel="noopener noreferrer"
             title="James Rosenthal Linkedin"
             target="_blank"
-            className="linkedin"
+            className={sociallinks.linkedin}
           >
-Linkedin
-
+          Linkedin
           </a>
           <a
             href="https://www.behance.net/JCROSENTHAd34b"
             rel="noopener noreferrer"
             title="James Rosenthal Behance"
             target="_blank"
-            className="behance"
+            className={sociallinks.behance}
           >
-Behance
-
+          Behance
           </a>
         </div>
       </div>
     </div>
-    <div className="copyright">
+    <div className={styles.copyright}>
       Copyright &copy;
       {(new Date()).getFullYear()}
       , James Rosenthal.  All rights reserved.

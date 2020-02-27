@@ -1,5 +1,6 @@
 import React from 'react';
 import projects from 'projects';
+import styles from './core.module.scss';
 
 const links = [{
   url: '/linkedin',
@@ -10,7 +11,10 @@ const links = [{
 }];
 
 const Navigation = () => (
-  <div className="meny">
+  <div
+    id="meny"
+    className={styles.meny}
+  >
     <nav>
       <a href="/" title="James Rosenthal, home">
         James Rosenthal

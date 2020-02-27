@@ -6,11 +6,17 @@ import {
 } from 'react-router-dom';
 import routes from 'routes';
 import 'services/ga_tracker';
+import Head from 'components/Head';
+import styles from './core.module.scss';
 
 const App = () => (
   <>
     <Navigation />
-    <div className="contents">
+    <div
+      id="contents"
+      className={styles.contents}
+    >
+      <Head />
       <Router>
         <Switch>
           {routes.map((route, key) => (
@@ -25,7 +31,6 @@ const App = () => (
       </Router>
       <Foot />
     </div>
-
   </>
 );
 

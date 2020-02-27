@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import About from 'components/About';
-import Head from 'components/Head';
 import routes from 'routes';
 import projects from 'projects';
 
@@ -20,7 +19,6 @@ class Home extends Component {
       <>
         <div className="river">
 
-          <Head />
 
           <div className="row name-hero">
             <span className="my-name-is">My name is</span>
@@ -42,14 +40,17 @@ class Home extends Component {
           <div id="grid" className="portfolio-grid">
 
             {projects.map((project, key) => (
-              <div className={project.type}>
+              <div
+                key={String(key)}
+                className={project.type}
+              >
                 <a
-                  key={String(key)}
                   href={project.name}
                   title={project.display}
                 >
-                  {project.images.map((image) => image.type === 'thumb' && (
+                  {project.images.map((image, idx) => image.type === 'thumb' && (
                     <img
+                      key={String(idx)}
                       src={`https://res.cloudinary.com/jcrosenthal/image/upload/${image.src}`}
                       alt={project.display}
                     />

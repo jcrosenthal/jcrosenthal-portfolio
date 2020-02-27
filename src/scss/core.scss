@@ -27,49 +27,6 @@
   background-image: url(http://res.cloudinary.com/jcrosenthal/image/upload/v1408050625/404_cjvi7s.gif);
 }
 
-.heading-links {
-  padding: 30px 0;
-  display: flex;
-  justify-content: space-between;
-
-  button {
-    appearance: none;
-    color: white;
-    font-weight: bold;
-    font-family: $open_sans;
-    border: solid 4px white;
-    padding: 10px 20px;
-    background: none;
-    border-radius: 4px;
-    margin-left: 40px;
-  }
-
-  @include breakpoint(phone) {
-    padding: 21px 0;
-  }
-}
-
-header {
-  .social-links {
-    position: relative;
-    right: 30px;
-
-    @include breakpoint(phone) {
-      right: 0;
-      top: -10px;
-    }
-
-    a {
-      opacity: 0.7;
-      transition: all 0.3s ease;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
-}
-
 a.menu {
   font-family: $open_sans;
   font-size: 16px;
@@ -271,116 +228,8 @@ figure {
   }
 }
 
-.footer-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.copyright {
-  max-width: 800px;
-  margin: 30px auto 0;
-}
-
-footer {
-  background: $diamonds top left repeat;
-  padding: 60px 0;
-  font-family: $open_sans;
-
-  a {
-    font-family: $open_sans;
-    font-size: 14px;
-    line-height: 150%;
-    color: rgb(160, 160, 160);
-    opacity: 0.9;
-    display: block;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  span {
-    font-family: $open_sans;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 150%;
-    color: rgb(160, 160, 160);
-    display: block;
-    margin-bottom: 10px;
-  }
-}
-
-.copyright {
-  font-family: $open_sans;
-  font-size: 14px;
-  line-height: 120%;
-  color: rgba(255, 255, 255, 0.2);
-  text-align: center;
-  border-top: solid 1px rgba(255, 255, 255, 0.2);
-  padding: 30px 0;
-  clear: both;
-}
-
-.social-links {
-  justify-content: flex-end;
-  display: flex;
-
-  a {
-    opacity: 0.6;
-    transition: all 0.3s ease;
-    background: $social-icons no-repeat;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin: 0 10px;
-    font-size: 0;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  .linkedin {
-    background-position: -66px -18px;
-  }
-
-  .behance {
-    background-position: -120px -18px;
-  }
-}
-
 .product-page {
-  header {
-    background-color: rgba(248, 248, 248, 0.9);
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    @include breakpoint(phone) {
-      height: 60px;
-    }
-
-    a.menu {
-      color: #313131;
-      border-color: #313131;
-    }
-
-    .social-links {
-      top: -10px;
-
-      a {
-        background-image: url('http://res.cloudinary.com/jcrosenthal/image/upload/v1408050569/social-icons-dark_iwaskc.svg');
-      }
-    }
-
-    .large-6.columns {
-      width: 50%;
-    }
-  }
+  
 
   h1 {
     font-family: $merriweather;
@@ -498,5 +347,3 @@ footer {
   position: fixed;
   width: 100%;
 }
-
-@import 'meny';
