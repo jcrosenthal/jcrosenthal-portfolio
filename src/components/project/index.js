@@ -2,7 +2,7 @@ import React from 'react';
 
 const Project = ({ project }) => (
   <section className="product-page">
-    <div className="hero">
+    <div className="hero" style={{ backgroundImage: `url(https://res.cloudinary.com/jcrosenthal/image/upload/${project.images.find((image) => image.type === 'hero').src})` }}>
       <div className="project-title">
         <h1>
           { project.display }
@@ -14,14 +14,11 @@ const Project = ({ project }) => (
       </div>
     </div>
     <div className="project_details">
-      <div className="">
-        <img src={`https://res.cloudinary.com/jcrosenthal/image/upload/${project.heroImg}`} alt="" />
-      </div>
-      {project.images.map((image, key) => (
+      {project.images.map((image, key) => image.type === 'portfolio' && (
         <img
-          src={`https://res.cloudinary.com/jcrosenthal/image/upload/${image}`}
+          src={`https://res.cloudinary.com/jcrosenthal/image/upload/${image.src}`}
           key={String(key)}
-          alt=""
+          alt={project.name}
         />
       ))}
     </div>

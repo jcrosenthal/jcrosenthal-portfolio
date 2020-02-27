@@ -3,8 +3,10 @@ const projects = [{
   type: 'web_design',
   display: 'Almost Six Six',
   summary: 'Web design & development, logo design',
-  heroImg: 'almost66/unblurred.jpg',
   images: [{
+    src: 'almost66/unblurred.jpg',
+    type: 'hero',
+  }, {
     src: 'web%20design%20thumbs/almost_sixsix.jpg',
     type: 'thumb',
   },
@@ -27,8 +29,10 @@ const projects = [{
   type: 'web_design',
   display: 'BrendanBerry.com',
   summary: 'Web design & development, logo design',
-  heroImg: '/brendan_berry/bb.jpg',
   images: [{
+    src: '/brendan_berry/bb.jpg',
+    type: 'hero',
+  }, {
     src: 'web%20design%20thumbs/brendan_berry.jpg',
     type: 'thumb',
   },
@@ -47,8 +51,10 @@ const projects = [{
   type: 'web_design',
   display: 'Craig DeLorenzo',
   summary: 'Web design & development, logo design',
-  heroImg: 'craig_delorenzo/cd.jpg',
   images: [{
+    src: 'craig_delorenzo/cd.jpg',
+    type: 'hero',
+  }, {
     src: 'web%20design%20thumbs/craigdelorenzo.jpg',
     type: 'thumb',
   },
@@ -71,8 +77,10 @@ const projects = [{
   type: 'web_design',
   display: 'Craig Hanson',
   summary: 'Web design & development, logo design',
-  heroImg: 'craig_hanson/ch.jpg',
   images: [{
+    src: 'craig_hanson/ch.jpg',
+    type: 'hero',
+  }, {
     src: 'web%20design%20thumbs/craig_hanson.jpg',
     type: 'thumb',
   },
@@ -99,8 +107,10 @@ const projects = [{
   display: 'FogSnob',
   type: 'branding',
   summary: 'Web design & development, logo design',
-  heroImg: 'fifl/fs.jpg',
   images: [{
+    src: 'fifl/fs.jpg',
+    type: 'hero',
+  }, {
     src: 'branding/fogsnob.jpg',
   },
   {
@@ -122,8 +132,10 @@ const projects = [{
   display: 'Joe Nott Band',
   type: 'web_design',
   summary: 'Web design & development, logo design',
-  heroImg: 'joe_nott/blurred.jpg',
   images: [{
+    src: 'joe_nott/blurred.jpg',
+    type: 'hero',
+  }, {
     src: 'web%20design%20thumbs/joe_nott.jpg',
     type: 'thumb',
   },
@@ -150,8 +162,10 @@ const projects = [{
   display: 'Illustration',
   type: 'illustration',
   summary: 'Freelance & personal work',
-  heroImg: 'illustration/blurred.jpg',
   images: [{
+    src: 'illustration/blurred.jpg',
+    type: 'hero',
+  }, {
     src: 'illustration/campzombie.jpg',
     type: 'thumb',
   },
@@ -182,7 +196,7 @@ const projects = [{
   display: 'JVW inc.',
   type: 'branding',
   summary: 'Logo design & branding',
-  heroImg: 'jvw/blurred.jpg',
+  src: 'jvw/blurred.jpg',
   images: [{
     src: 'branding/jvw.jpg',
     type: 'thumb',
@@ -210,7 +224,7 @@ const projects = [{
   display: 'mStream - streaming media',
   type: 'web_design',
   summary: 'Web design & development, logo design',
-  heroImg: 'mstream/blurred.jpg',
+  src: 'mstream/blurred.jpg',
   images: [{
     src: 'web%20design%20thumbs/mstream.jpg',
     type: 'thumb',
