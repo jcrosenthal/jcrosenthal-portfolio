@@ -3,9 +3,9 @@ import React from 'react';
 const About = () => (
   <div className="about-me">
     <div className="row">
-      <div className="large-6 small-12 columns">
+      <div className="copy">
         <h2>About Me</h2>
-        <p>Web design and development is my bread &amp; butter. HTML, CSS, SASS, a bit of PHP, and Javascript (mostly jQuery) are the languages I use day to day. I get unreasonably excited about front end dev.</p>
+        <p>Web design and development is my bread &amp; butter. HTML, CSS, SASS, PHP, and a ton of Javascript (React/Angularjs/Express) are the languages I use day to day. I get unreasonably excited about front end dev.</p>
       </div>
 
       <div className="large-6 small-12 columns text-right">
