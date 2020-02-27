@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Project = ({ project }) => (
-  <section className="contents product-page">
+  <section className="product-page">
     <div className="hero">
       <div className="project-title">
         <h1>
@@ -13,11 +13,17 @@ const Project = ({ project }) => (
         <div className="overlay" />
       </div>
     </div>
-
     <div className="project_details">
-      <div className="row">
-        <img src="project.heroImg" alt="" />
+      <div className="">
+        <img src={`https://res.cloudinary.com/jcrosenthal/image/upload/${project.heroImg}`} alt="" />
       </div>
+      {project.images.map((image, key) => (
+        <img
+          src={`https://res.cloudinary.com/jcrosenthal/image/upload/${image}`}
+          key={String(key)}
+          alt=""
+        />
+      ))}
     </div>
   </section>
 );

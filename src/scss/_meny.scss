@@ -1,0 +1,43 @@
+.meny {
+  display: none;
+  padding: 20px;
+  overflow: auto;
+  background: #333;
+  color: #eee;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.meny nav {
+  margin-top: 10px;
+}
+
+.meny nav a {
+  display: inline-block;
+  width: 200px;
+  list-style: none;
+  font-size: 20px;
+  padding: 3px 10px;
+}
+
+.meny nav a:before {
+  content: '-';
+  margin-right: 5px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.contents {
+  background: #eee;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform-style: preserve-3d;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

@@ -9,19 +9,26 @@ const links = [{
 }];
 
 const Navigation = () => (
-  <header>
+  <div className="meny">
     <nav>
+      <a href="/" title="James Rosenthal, home">
+        James Rosenthal
+        {' '}
+        <br />
+        {' '}
+        <em>web design &amp; development</em>
+      </a>
       {links.map((link, key) => (
         <a
           key={String(key)}
           href={link.url}
           title={link.display}
         >
-          { link.display }
+          {link.display}
         </a>
       ))}
     </nav>
-  </header>
+  </div>
 );
 
 export default Navigation;

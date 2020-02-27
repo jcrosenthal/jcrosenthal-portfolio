@@ -1,7 +1,7 @@
 const projects = [{
   name: 'almost66',
   display: 'Almost Six Six',
-  summary: 'Web design &amp; development, logo design',
+  summary: 'Web design & development, logo design',
   heroImg: 'almost66/unblurred.jpg',
   images: [
     'almost66/a66-logo.jpg',
@@ -12,7 +12,7 @@ const projects = [{
 {
   name: 'brendanberry',
   display: 'BrendanBerry.com',
-  summary: 'Web design &amp; development, logo design',
+  summary: 'Web design & development, logo design',
   heroImg: '/brendan_berry/bb.jpg',
   images: [
     '/brendan_berry/1.jpg',
@@ -22,7 +22,7 @@ const projects = [{
 {
   name: 'craigdelorenzo',
   display: 'Craig DeLorenzo',
-  summary: 'Web design &amp; development, logo design',
+  summary: 'Web design & development, logo design',
   heroImg: 'craig_delorenzo/cd.jpg',
   images: [
     'craig_delorenzo/1.jpg',
@@ -33,7 +33,7 @@ const projects = [{
 {
   name: 'craighanson',
   display: 'Craig Hanson',
-  summary: 'Web design &amp; development, logo design',
+  summary: 'Web design & development, logo design',
   heroImg: 'craig_hanson/ch.jpg',
   images: [
     'craig_hanson/1.jpg',
@@ -45,7 +45,7 @@ const projects = [{
 {
   name: 'fogsnob',
   display: 'FogSnob',
-  summary: 'Web design &amp; development, logo design',
+  summary: 'Web design & development, logo design',
   heroImg: 'fifl/fs.jpg',
   images: [
     'fifl/fogsnob/1.jpg',
@@ -55,7 +55,7 @@ const projects = [{
 {
   name: 'joenottband',
   display: 'Joe Nott Band',
-  summary: 'Web design &amp; development, logo design',
+  summary: 'Web design & development, logo design',
   heroImg: 'joe_nott/blurred.jpg',
   images: [
     '0/v1408050886/joe_nott/1.jpg',
@@ -67,7 +67,7 @@ const projects = [{
 {
   name: 'illustration',
   display: 'Illustration',
-  summary: 'Freelance &amp; personal work',
+  summary: 'Freelance & personal work',
   heroImg: 'illustration/blurred.jpg',
   images: [
     'illustration/1.jpg',
@@ -80,7 +80,7 @@ const projects = [{
 {
   name: 'jvw',
   display: 'JVW inc.',
-  summary: 'Logo design &amp; branding',
+  summary: 'Logo design & branding',
   heroImg: 'jvw/blurred.jpg',
   images: [
     'jvw/1.jpg',
@@ -92,7 +92,7 @@ const projects = [{
 {
   name: 'mstream',
   display: 'mStream - streaming media',
-  summary: 'Web design &amp; development, logo design',
+  summary: 'Web design & development, logo design',
   heroImg: 'mstream/blurred.jpg',
   images: [
     'mstream/1.jpg',
