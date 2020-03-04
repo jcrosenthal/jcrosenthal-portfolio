@@ -79,7 +79,7 @@ class Head extends React.Component {
           >
             <div className={`${sociallinks['social-links']} ${styles['social-links-container']}`}>
               <a
-                rel="noopener"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/jcrosenthal"
                 target="_blank"
                 title="James Rosenthal Linkedin"
@@ -88,7 +88,7 @@ class Head extends React.Component {
               linkedin
               </a>
               <a
-                rel="noopener"
+                rel="noopener noreferrer"
                 href="https://www.behance.net/JCROSENTHAd34b"
                 target="_blank"
                 title="James Rosenthal Behance"

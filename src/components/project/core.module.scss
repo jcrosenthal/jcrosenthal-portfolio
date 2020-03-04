@@ -1,0 +1,109 @@
+@import 'scss/vars';
+
+.product-page {
+
+  h1 {
+    font-family: $merriweather;
+    font-size: 50px;
+    line-height: 120%;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    text-shadow: 0 0 30px #616161;
+
+    @include breakpoint(phone) {
+      font-size: 26px;
+    }
+  }
+
+  h2 {
+    font-family: $merriweather;
+    font-size: 20px;
+    line-height: 120%;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    margin: 25px 0 0 0;
+    text-shadow: 0 0 30px #616161;
+
+    @include breakpoint(phone) {
+      font-size: 16px;
+    }
+  }
+}
+
+.overlay {
+  display: block;
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  background-position: center top;
+  background-repeat: no-repeat;
+  filter: blur(10px);
+}
+
+.project_details {
+  padding: 90px 0;
+  background: #FFF;
+  width: 100%;
+
+  p {
+    width: 100%;
+  }
+
+  img {
+    max-width: 80%;
+    display: block;
+    margin: 90px auto;
+    box-shadow: 0 0 10px #F9F9F9;
+    border: solid 1px #F9F9F9;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.project-title {
+  width: 70%;
+  margin: 220px auto 14% auto;
+
+  @include breakpoint(phone) {
+    margin-top: 130px;
+  }
+}
+
+.img-src {
+  position: absolute;
+  height: 483px;
+  background-position: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.layout-foreground {
+  background: white;
+  height: 2000px;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  margin-top: 450px;
+  text-align: center;
+}
+
+.hero {
+  overflow: hidden;
+  max-height: 484px !important;
+  background-size: cover;
+}
+
+#blurred-image-container {
+  z-index: -10;
+  position: fixed;
+  width: 100%;
+}

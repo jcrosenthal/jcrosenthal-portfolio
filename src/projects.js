@@ -196,8 +196,10 @@ const projects = [{
   display: 'JVW inc.',
   type: 'branding',
   summary: 'Logo design & branding',
-  src: 'jvw/blurred.jpg',
   images: [{
+    src: 'jvw/blurred.jpg',
+    type: 'hero',
+  }, {
     src: 'branding/jvw.jpg',
     type: 'thumb',
   },
@@ -224,8 +226,10 @@ const projects = [{
   display: 'mStream - streaming media',
   type: 'web_design',
   summary: 'Web design & development, logo design',
-  src: 'mstream/blurred.jpg',
   images: [{
+    src: 'mstream/blurred.jpg',
+    type: 'hero',
+  }, {
     src: 'web%20design%20thumbs/mstream.jpg',
     type: 'thumb',
   },

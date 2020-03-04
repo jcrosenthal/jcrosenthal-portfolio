@@ -1,72 +1,78 @@
-import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import About from 'components/About';
-import routes from 'routes';
 import projects from 'projects';
+import styles from './core.module.scss';
 
-class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+function Home() {
+  const [filter, setFilter] = useState('web_design');
 
-  async componentDidMount() {
-    await routes;
-  }
-
-  render() {
-    return (
-      <>
-        <div className="river">
-
-
-          <div className="row name-hero">
-            <span className="my-name-is">My name is</span>
-            <span className="name">James Rosenthal</span>
-            <span className="subtitle">web design / front end development / branding</span>
-          </div>
+  return (
+    <>
+      <div className={styles.river}>
+        <div className={`${styles.row} ${styles['name-hero']}`}>
+          <span className={styles['my-name-is']}>My name is</span>
+          <span className={styles.name}>James Rosenthal</span>
+          <span className={styles.subtitle}>web design / front end development / branding</span>
         </div>
+      </div>
 
-        <div className="portfolio-sections">
-          <div className="row">
-            <div id="web_design" className="section-link"><span>Web Design</span></div>
-            <div id="branding" className="section-link"><span>Branding</span></div>
-            <div id="illustration" className="section-link"><span>Illustration</span></div>
-          </div>
-        </div>
+      <div className={styles['portfolio-sections']}>
+        <button
+          type="button"
+          onClick={() => setFilter('web_design')}
+          className={`${styles['section-link']} ${filter === 'web_design' ? styles.active : ''}`}
+        >
+          Web Design
+        </button>
+        <button
+          type="button"
+          onClick={() => setFilter('branding')}
+          className={`${styles['section-link']} ${filter === 'branding' ? styles.active : ''}`}
+        >
+          Branding
+        </button>
+        <button
+          type="button"
+          onClick={() => setFilter('illustration')}
+          className={`${styles['section-link']} ${filter === 'illustration' ? styles.active : ''}`}
+        >
+          Illustration
+        </button>
+      </div>
 
-        <div className="portfolio-samples">
+      <div className={styles['portfolio-samples']}>
 
-          <div id="grid" className="portfolio-grid">
+        <div className={styles['portfolio-grid']}>
 
-            {projects.map((project, key) => (
-              <div
-                key={String(key)}
-                className={project.type}
-              >
-                <a
-                  href={project.name}
-                  title={project.display}
+          {
+            projects.filter((p) => p.type === filter)
+              .map((project, key) => (
+                <div
+                  key={String(key)}
+                  className={project.type}
                 >
-                  {project.images.map((image, idx) => image.type === 'thumb' && (
+                  <a
+                    href={project.name}
+                    title={project.display}
+                  >
+                    {project.images.map((image, idx) => image.type === 'thumb' && (
                     <img
                       key={String(idx)}
                       src={`https://res.cloudinary.com/jcrosenthal/image/upload/${image.src}`}
                       alt={project.display}
                     />
-                  ))}
-                </a>
-              </div>
-            ))}
-
-          </div>
-
+                    ))}
+                  </a>
+                </div>
+              ))
+          }
         </div>
 
-        <About />
-      </>
-    );
-  }
+      </div>
+
+      <About />
+    </>
+  );
 }
 
 export default Home;

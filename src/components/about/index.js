@@ -9,7 +9,7 @@ const About = () => (
       </div>
 
       <div className="large-6 small-12 columns text-right">
-        <img src="http://res.cloudinary.com/jcrosenthal/image/upload/v1408069179/about-me_q3byu4.jpg" alt="James Rosenthal - Web Designer / Developer" />
+        <img src="https://res.cloudinary.com/jcrosenthal/image/upload/v1408069179/about-me_q3byu4.jpg" alt="James Rosenthal - Web Designer / Developer" />
       </div>
     </div>
   </div>
