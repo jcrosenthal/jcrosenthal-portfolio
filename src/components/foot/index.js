@@ -30,7 +30,7 @@ const Foot = () => (
           Linkedin
           </a>
           <a
-            href="https://www.behance.net/JCROSENTHAd34b"
+            href="https://www.behance.net/JCROSENTHAL"
             rel="noopener noreferrer"
             title="James Rosenthal Behance"
             target="_blank"

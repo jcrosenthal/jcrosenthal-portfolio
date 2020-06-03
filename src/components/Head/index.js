@@ -1,21 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Meny from 'services/meny';
 import sociallinks from 'scss/social-links.module.scss';
 import styles from './core.module.scss';
 
-console.log(sociallinks);
+function Head() {
+  const [meny, setMeny] = useState({});
 
-class Head extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      _meny: {},
-    };
-
-    this.openMenu = this.openMenu.bind(this);
-  }
-
-  componentDidMount() {
+  useEffect(() => {
     // Create an instance of Meny
     const _meny = Meny.create({
       // The element that will be animated in from off screen
@@ -49,60 +40,51 @@ class Head extends React.Component {
     // meny.isOpen();
 
     // Events:
-    _meny.addEventListener('open', () => { console.log('open'); });
-    _meny.addEventListener('close', () => { console.log('close'); });
+    // _meny.addEventListener('open', () => { console.log('open'); });
+    // _meny.addEventListener('close', () => { console.log('close'); });
 
-    this.setState({ _meny });
-  }
+    setMeny(_meny);
+  }, []);
 
-  openMenu() {
-    const { _meny } = this.state;
-
-    _meny.open();
-  }
-
-  render() {
-    return (
-      <header className={styles.header}>
-        <div className={styles['heading-links']}>
-          <div className="large-6 small-6 columns">
-            <button
-              type="button"
-              onClick={this.openMenu}
-              className={styles.menu}
-            >
-              MENU
-            </button>
-          </div>
-          <div
-            className="large-6 small-6 columns"
+  return (
+    <header className={styles.header}>
+      <div className={styles['heading-links']}>
+        <div className="large-6 small-6 columns">
+          <button
+            type="button"
+            onClick={() => meny.open()}
+            className={styles.menu}
           >
-            <div className={`${sociallinks['social-links']} ${styles['social-links-container']}`}>
-              <a
-                rel="noopener noreferrer"
-                href="https://www.linkedin.com/in/jcrosenthal"
-                target="_blank"
-                title="James Rosenthal Linkedin"
-                className={sociallinks.linkedin}
-              >
+              MENU
+          </button>
+        </div>
+        <div
+          className="large-6 small-6 columns"
+        >
+          <div className={`${sociallinks['social-links']} ${styles['social-links-container']}`}>
+            <a
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/jcrosenthal"
+              target="_blank"
+              title="James Rosenthal Linkedin"
+              className={sociallinks.linkedin}
+            >
               linkedin
-              </a>
-              <a
-                rel="noopener noreferrer"
-                href="https://www.behance.net/JCROSENTHAd34b"
-                target="_blank"
-                title="James Rosenthal Behance"
-                className={sociallinks.behance}
-              >
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="https://www.behance.net/JCROSENTHAL"
+              target="_blank"
+              title="James Rosenthal Behance"
+              className={sociallinks.behance}
+            >
               behance
-              </a>
-            </div>
+            </a>
           </div>
         </div>
-      </header>
-
-    );
-  }
+      </div>
+    </header>
+  );
 }
 
 export default Head;
